@@ -8,5 +8,6 @@ public class main {
         
         ui ui = new ui();
         ui.start();
+        System.out.println("");
     }
 }
