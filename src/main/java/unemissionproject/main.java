@@ -1,9 +1,12 @@
 package unemissionproject;
 
+import unemissionproject.ui.ui;
+
 public class main {
     
     public static void main (String [] args) {
-        System.out.println("hello");
-
+        
+        ui ui = new ui();
+        ui.start();
     }
 }
