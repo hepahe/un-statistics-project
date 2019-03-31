@@ -6,6 +6,7 @@
 package unemissionproject.ui;
 
 import java.util.Scanner;
+import unemissionproject.logic.FileReader;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.util.Scanner;
  */
 public class ui {
     private Scanner scanner = new Scanner(System.in);
+    FileReader filereader = new FileReader();
     
     public void start () {
         printOptions();
@@ -20,7 +22,8 @@ public class ui {
             System.out.print("> ");
             String command = scanner.nextLine();
             if (command.equals("1")) {
-                System.out.println("now some data");
+                filereader.start();
+                printOptions();
             } else if (command.equals("x")) {
                 System.out.println("Thank you");
                 break;
@@ -28,9 +31,10 @@ public class ui {
                 printOptions();
             }
         }
+        
     } public void printOptions() {
         System.out.println("Options:");
-        System.out.println("1 - emission data");
+        System.out.println("1 - statistics");
         System.out.println("enter - see options");
         System.out.println("x - close program");
     
